@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Stock Price Viewer</title>
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <!-- Include Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Live Stock Price Viewer</h1>
+    <div class="input-container">
+      <input type="text" id="symbol" placeholder="Enter stock symbol (e.g. TCS.NS)">
+      <button onclick="getStockPrice()">Get Price</button>
+    </div>
+    <div class="result">
+      <p id="output">Waiting for input...</p>
+    </div>
+    <canvas id="stockChart"></canvas>
+  </div>
+
+  <!-- Footer with "Made by" text -->
+  <footer class="footer">
+    <p>Made by: <br/>YUVRAJ SANKHYAN and   ASHMIT THAKUR</p>
+  </footer>
+
+  <!-- Your JS file -->
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
